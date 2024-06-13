@@ -1,0 +1,39 @@
+{
+  "name": "ibro",
+  "version": "1.0.0",
+  "description": "Telegram bot using node-telegram-bot-api",
+  "main": "ibro.js",
+  "scripts": {
+    "start": "node ibro.js"
+  },
+  "author": "mohammed",
+  "license": "MIT",
+  "dependencies": {
+    "copy-paste": "^1.5.3",
+    "ctx": "^0.3.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "sessions": "^0.0.2-7",
+    "split": "^1.0.1",
+    "telegraf": "^4.16.3",
+    "telegraf-session-local": "^2.1.1"
+  },
+  "keywords": [],
+  "apps": [
+    {
+      "name": "ibro",
+      "script": "ibro.js",
+      "watch": false,
+      "env": {
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+        "NODE_ENV": "local_public",
+        "PORT": 3000,
+        "PROXY_PORT": 4000
+      },
+      "max_memory_restart": "500M",
+      "node_args": [
+        "--max_old_space_size=500"
+      ]
+    }
+  ]
+}
